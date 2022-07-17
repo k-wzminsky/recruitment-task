@@ -1,0 +1,4 @@
+from pages.base_page import BasePage
+from pages.rent_details_page import RentDetailsPage
+from pages.search_car_page import SearchCarPage
+from pages.summary_rent_details_page import SummaryRentDetailsPage
