@@ -1,5 +1,4 @@
 Feature: Renting a car
-"""Assuming that application works as expected, excluding bugs."""
 
   Background:
     Given the user is on Search car page
@@ -13,7 +12,8 @@ Feature: Renting a car
     And the user clicks on the "Buttons.SEARCH"
     Then the users sees the displayed list of "<available_cars_amount>" available cars
 
-    Examples: # Typo "Germainy" noted in bugs
+    # Typo "Germainy" noted in bugs
+    Examples: Test case for <country>, <city>
       | country  | city    | available_cars_amount |
       | France   | Berlin  | 25                    |
       | Germainy | Berlin  | 25                    |
@@ -28,17 +28,14 @@ Feature: Renting a car
     And the user clicks on the "Buttons.SEARCH"
     Then the users sees the list of cars with correct calculated price for amount of "<days>" days
 
-    Examples: # Typo "Germainy" noted in bugs
+    Examples: Test case for <country>, <city>
       | country  | city   | days |
       | France   | Paris  | 3    |
       | Germainy | Berlin | 5    |
 
-
-  Scenario Outline: The user verifies details and rents in <country>, <city> the <company_name>, <model>, <plate> car
-    """
-    Gherkin below should be cut off to smaller parts using execute_steps()
-    but I left in this form for easier review
-    """
+  # Gherkin below should be cut off to smaller parts using execute_steps()
+  # but I left in this form for easier review
+  Scenario Outline: The user verifies details and rents in <country>, <city> from the <company_name>, <model>, <plate_number> car
     When the user selects the "Dropdowns.COUNTRY" with "<country>" value
     And the user selects the "Dropdowns.CITY" with "<city>" value
     And the user fills the "Inputs.MODEL" field with "<model>" value
