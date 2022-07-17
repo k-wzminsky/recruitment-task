@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import Select
 
 
 class BasePage:
-
     def __init__(self, driver):
         self.driver = driver
 
@@ -17,13 +16,17 @@ class BasePage:
         )
         element.click()
 
-    def get(self, locator: tuple, wait_seconds: int = WAIT_TIME) -> webelement.WebElement:
+    def get(
+        self, locator: tuple, wait_seconds: int = WAIT_TIME
+    ) -> webelement.WebElement:
         element = wait.WebDriverWait(driver=self.driver, timeout=wait_seconds).until(
             expected_conditions.visibility_of_element_located(locator)
         )
         return element
 
-    def get_all(self, locator: tuple, wait_seconds: int = WAIT_TIME) -> webelement.WebElement:
+    def get_all(
+        self, locator: tuple, wait_seconds: int = WAIT_TIME
+    ) -> webelement.WebElement:
         element = wait.WebDriverWait(driver=self.driver, timeout=wait_seconds).until(
             expected_conditions.visibility_of_all_elements_located(locator)
         )

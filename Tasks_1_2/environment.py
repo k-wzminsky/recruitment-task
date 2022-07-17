@@ -7,7 +7,7 @@ from parsers import register_types
 register_types()
 
 
-def before_all(context: runner.Context,):
+def before_all(context: runner.Context):
     context.base_url = behave.use_fixture(configuration.base_url, context)
     context.driver = behave.use_fixture(configuration.driver, context)
 
@@ -16,7 +16,7 @@ def before_scenario(context: runner.Context, scenario):
     _add_table_to_context(context)
 
 
-def after_all(context: runner.Context,):
+def after_all(context: runner.Context):
     context.driver.quit()
 
 

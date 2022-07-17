@@ -9,6 +9,8 @@ class FormattedLocator(NamedTuple):
 
     def formatted(self, **kwargs):
         try:
-            return FormattedLocator(strategy=self.strategy, locator=self.locator.format(**kwargs))
+            return FormattedLocator(
+                strategy=self.strategy, locator=self.locator.format(**kwargs)
+            )
         except KeyError as key_error:
             raise KeyError(f"Missing {key_error} in locator")

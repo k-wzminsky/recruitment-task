@@ -29,7 +29,7 @@ def step_impl(context: runner.Context, locator_name: str, input_value: str) -> N
 def step_impl(context: runner.Context, locator_name: str, input_value: str) -> None:
     locator = get_locator_value(context, locator_name)
     if input_value == "current_date":
-        input_value = datetime.today().strftime('%Y-%m-%d')
+        input_value = datetime.today().strftime("%Y-%m-%d")
     # Date input needs 6 characters for the year input,
     # the two zeros are a workaround for inserting the correct format date
     add_value_to_context(context, locator_name, input_value)
@@ -45,4 +45,3 @@ def step_impl(context: runner.Context, dropdown_name: str, dropdown_value: str) 
 @step('the users is redirected to the "{page_type:PageType}"')
 def step_impl(context: runner.Context, page_type):
     context.page = page_type(context.driver)
-

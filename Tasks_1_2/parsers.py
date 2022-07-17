@@ -10,4 +10,3 @@ def register_types() -> None:
 
 def parse_page_type(page_name: str) -> None:
     return getattr(pages, page_name)
-
