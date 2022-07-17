@@ -114,6 +114,6 @@ def step_impl(
         And the user clicks on the "Buttons.SEARCH"
         And the user gets the price per day for car with "{plate_number}" plate number
         And the user clicks on the Rent button for car with "{plate_number}" plate number
-        Then the users is redirected to the "RentDetailsPage"
+        Then the user is redirected to the "RentDetailsPage"
         """
     )

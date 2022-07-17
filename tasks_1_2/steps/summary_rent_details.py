@@ -15,4 +15,4 @@ def step_impl(context: runner.Context, company_details: str):
 @step("there are no inputs error messages displayed")
 def step_impl(context: runner.Context):
     is_alert_displayed = context.page.is_displayed(context.page.Misc.ALERT)
-    assert is_alert_displayed, "The input alert is displayed"
+    assert is_alert_displayed, "The input validation is displayed"

@@ -15,7 +15,7 @@ Feature: Renting a car
     # Typo "Germainy" noted in bugs
     Examples: Test case for <country>, <city>
       | country  | city    | available_cars_amount |
-      | France   | Berlin  | 25                    |
+      | France   | Paris   | 21                    |
       | Germainy | Berlin  | 25                    |
       | Poland   | Cracow  | 30                    |
       | Poland   | Wroclaw | 24                    |
@@ -44,11 +44,11 @@ Feature: Renting a car
     And the user clicks on the "Buttons.SEARCH"
     And the user gets the price per day for car with "<plate_number>" plate number
     And the user clicks on the Rent button for car with "<plate_number>" plate number
-    Then the users is redirected to the "RentDetailsPage"
+    Then the user is redirected to the "RentDetailsPage"
 
     And the correct "<company_name>" company name, rent details and dates are displayed
     But the user clicks on the "Buttons.RENT"
-    Then the users is redirected to the "SummaryRentDetailsPage"
+    Then the user is redirected to the "SummaryRentDetailsPage"
 
     And the correct "<company_name>" company summary details are displayed
     When the user fills the "Inputs.NAME" field with "John" value

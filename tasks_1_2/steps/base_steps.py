@@ -41,6 +41,6 @@ def step_impl(context: runner.Context, dropdown_name: str, dropdown_value: str) 
     context.page.select_value_from_dropdown(locator, dropdown_value)
 
 
-@step('the users is redirected to the "{page_type:PageType}"')
+@step('the user is redirected to the "{page_type:PageType}"')
 def step_impl(context: runner.Context, page_type):
     context.page = page_type(context.driver)
