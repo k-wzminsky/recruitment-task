@@ -1,6 +1,5 @@
-from selenium.webdriver.common import by
-
 from pages import base_page
+from selenium.webdriver.common import by
 
 
 class RentDetailsPage(base_page.BasePage):

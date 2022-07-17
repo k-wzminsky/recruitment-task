@@ -1,6 +1,5 @@
 import behave
 from behave import runner
-
 from fixtures import configuration
 from parsers import register_types
 

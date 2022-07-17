@@ -1,6 +1,6 @@
 from selenium.common import TimeoutException
 from selenium.webdriver.remote import webelement
-from selenium.webdriver.support import wait, expected_conditions
+from selenium.webdriver.support import expected_conditions, wait
 from selenium.webdriver.support.ui import Select
 
 

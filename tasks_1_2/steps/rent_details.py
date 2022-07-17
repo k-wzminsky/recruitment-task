@@ -1,6 +1,5 @@
-from behave import runner, step
-
 import assertions
+from behave import runner, step
 
 
 @step("the model name is correctly displayed")

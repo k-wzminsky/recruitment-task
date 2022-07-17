@@ -1,8 +1,7 @@
 import typing
 
-from behave import runner, step
-
 import assertions
+from behave import runner, step
 from fixtures import base_fixtures
 from fixtures.base_fixtures import get_table_index_from_element_text
 from locator_formatters import FormattedLocator

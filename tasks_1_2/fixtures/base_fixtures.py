@@ -1,4 +1,3 @@
-import typing
 from datetime import datetime, timedelta
 
 from behave import runner

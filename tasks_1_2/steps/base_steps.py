@@ -1,9 +1,8 @@
 from datetime import datetime
 
-from behave import runner, step
-
 import pages
-from fixtures.base_fixtures import get_locator_value, add_value_to_context
+from behave import runner, step
+from fixtures.base_fixtures import add_value_to_context, get_locator_value
 from pages.search_car_page import SearchCarPage
 
 

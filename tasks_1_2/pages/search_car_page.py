@@ -1,7 +1,6 @@
-from selenium.webdriver.common import by
-
 from locator_formatters import FormattedLocator
 from pages import base_page
+from selenium.webdriver.common import by
 
 
 class SearchCarPage(base_page.BasePage):
