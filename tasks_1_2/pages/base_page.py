@@ -1,7 +1,7 @@
+import typing
 from selenium.common import TimeoutException
 from selenium.webdriver.remote import webelement
-from selenium.webdriver.support import expected_conditions, wait
-from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support import expected_conditions, ui, wait
 
 
 class BasePage:
@@ -26,7 +26,7 @@ class BasePage:
 
     def get_all(
         self, locator: tuple, wait_seconds: int = WAIT_TIME
-    ) -> webelement.WebElement:
+    ) -> typing.List[webelement.WebElement]:
         element = wait.WebDriverWait(driver=self.driver, timeout=wait_seconds).until(
             expected_conditions.visibility_of_all_elements_located(locator)
         )
@@ -38,7 +38,7 @@ class BasePage:
 
     def select_value_from_dropdown(self, locator: tuple, value: str) -> None:
         element = self.get(locator)
-        Select(element).select_by_visible_text(value)
+        ui.Select(element).select_by_visible_text(value)
 
     def is_displayed(self, locator: tuple) -> bool:
         try:

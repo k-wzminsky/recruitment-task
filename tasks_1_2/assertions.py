@@ -1,7 +1,7 @@
 import typing
 
 
-def compare_values(  # pylint: disable=line-too-long
+def compare_values(
     displayed_value: typing.Union[str, int], expected_value: typing.Union[str, int]
 ) -> None:
     assert (
@@ -9,7 +9,7 @@ def compare_values(  # pylint: disable=line-too-long
     ), f'The values are not that same. Is displayed: "{displayed_value}" but expected: "{expected_value}"'
 
 
-def expected_in_displayed(  # pylint: disable=line-too-long
+def expected_in_displayed(
     expected_value: typing.Union[str, int],
     displayed_value: typing.Union[str, int, list],
 ) -> None:

@@ -1,9 +1,8 @@
-from typing import NamedTuple
-
+import typing
 from selenium.webdriver.common import by
 
 
-class FormattedLocator(NamedTuple):
+class FormattedLocator(typing.NamedTuple):
     strategy: by.By
     locator: str
 

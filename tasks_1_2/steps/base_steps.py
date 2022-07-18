@@ -1,13 +1,12 @@
 from datetime import datetime
 
-import pages
 from behave import runner, step
 from fixtures.base_fixtures import add_value_to_context, get_locator_value
 from pages.search_car_page import SearchCarPage
 
 
 @step("the user is on Search car page")
-def step_impl(context):
+def step_impl(context: runner.Context):
     context.driver.get(context.base_url)
     context.page = SearchCarPage(context.driver)
 
