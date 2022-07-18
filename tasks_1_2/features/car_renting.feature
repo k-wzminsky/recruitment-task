@@ -4,7 +4,6 @@ Feature: Renting a car
     Given the user is on Search car page
 
   Scenario Outline: In the <country>, <city> are available <available_cars_amount> cars for renting
-
     When the user selects the "Dropdowns.COUNTRY" with "<country>" value
     And the user selects the "Dropdowns.CITY" with "<city>" value
     And the user fills the "Inputs.PICK_UP_DATE" date field with "current_date" value

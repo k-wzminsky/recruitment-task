@@ -1,9 +1,21 @@
+import datetime
+
 import behave
 from behave import runner
 from fixtures import configuration
 from parsers import register_types
 
 register_types()
+
+
+def after_all(context: runner.Context):
+    context.driver.quit()
+
+
+def after_step(context: runner.Context, step):
+    if step.status == 'failed':
+        current_date = str(datetime.datetime.today().strftime('%Y-%m-%d_%H-%M-%S'))
+        context.driver.save_screenshot(f"screenshots/failed_screenshot_{current_date}.png")
 
 
 def before_all(context: runner.Context):
@@ -13,10 +25,6 @@ def before_all(context: runner.Context):
 
 def before_scenario(context: runner.Context, scenario):
     _add_table_to_context(context)
-
-
-def after_all(context: runner.Context):
-    context.driver.quit()
 
 
 def _add_table_to_context(context: runner.Context) -> None:
