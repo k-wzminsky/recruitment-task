@@ -20,6 +20,7 @@ def after_step(context: runner.Context, step):
 
 def before_all(context: runner.Context):
     context.base_url = behave.use_fixture(configuration.base_url, context)
+    context.headless = behave.use_fixture(configuration.headless, context)
     context.driver = behave.use_fixture(configuration.driver, context)
 
 
