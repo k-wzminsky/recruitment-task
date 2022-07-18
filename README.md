@@ -14,7 +14,7 @@ This was done in two ways:
 ### To execute tests:
 1. Run `behave -D base_url="http://qalab.pl.tivixlabs.com/"`
 
-- Because the environment is not stable, the failed test will add a screenshot to the `screenshots`
+- Because the environment is not stable, the failed test will add a screenshot to the `tasks_1_2` directory
 - 
 # Task 3 - Bugs:
 Reported in JIRA.

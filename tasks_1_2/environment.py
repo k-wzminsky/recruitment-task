@@ -15,7 +15,7 @@ def after_all(context: runner.Context):
 def after_step(context: runner.Context, step):
     if step.status == 'failed':
         current_date = str(datetime.datetime.today().strftime('%Y-%m-%d_%H-%M-%S'))
-        context.driver.save_screenshot(f"screenshots/failed_screenshot_{current_date}.png")
+        context.driver.save_screenshot(f"failed_screenshot_{current_date}.png")
 
 
 def before_all(context: runner.Context):
